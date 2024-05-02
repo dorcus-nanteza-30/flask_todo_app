@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do App</title>
+</head>
+
+<body style="background-image: url('./static/school images.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; font-family: 'Times New Roman', Times, serif; margin: 0; padding: 20px;">
+
+  <div class="container" style="max-width: 500px; margin: 0 auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; padding: 15px 0; border-bottom: 1px solid #ddd; font-size: 1.5em; margin-bottom: 20px;">To Do App</h2>
+    <form action="/create" method="POST" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+      <input type="text" name="title" placeholder="Add your task" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; flex-grow: 1;">
+      <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add</button>
+    </form>
+    <ul id="list-container" style="padding: 0; list-style: none;">
+      <li class="task">
+        <span>Task 1</span>
+        <div style="display: flex;">
+          <form action="/edit/1" method="POST">
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Edit</button>
+          </form>
+          <form action="/delete/1" method="POST">
+            <button type="submit" style="background-color: #f44336; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Remove</button>
+          </form>
+        </div>
+      </li>
+      <li class="task">
+        <span>Task 2</span>
+        <div style="display: flex;">
+          <form action="/edit/2" method="POST">
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Edit</button>
+          </form>
+          <form action="/delete/2" method="POST">
+            <button type="submit" style="background-color: #f44336; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Remove</button>
+          </form>
+        </div>
+      </li>
+      <li class="task">
+        <span>Task 3</span>
+        <div style="display: flex;">
+          <form action="/edit/3" method="POST">
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Edit</button>
+          </form>
+          <form action="/delete/3" method="POST">
+            <button type="submit" style="background-color: #f44336; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Remove</button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
